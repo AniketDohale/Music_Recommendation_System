@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommedation </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="{{url_for('static', filename='img/mus.png')}}" alt="Music_Recommedation">
+                <a href="/">MusRec </a>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li>Song | <span class="span_songName">{{Song_name}}</span></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+
+            <form action="/" method="POST">
+                <div class="input_song">
+                    <input type="text" name="key" id="key" placeholder="Search Song..">
+                </div>
+            </form>
+
+            <div class="first_head">
+                <h1>Best Recommedation..</h1>
+
+                <div class="songItemContainer">
+                    <div class="songItem">
+                        <span class="songName">{{close_match}}
+                            <!-- <span class="artistName">| {{artist_of_the_song}}</span> -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second_head">
+                <h1>Other Recommedations..</h1>
+
+                <div class="songItemContainer">
+                    {% for recom in recom_song %}
+                    <div class="songItem">
+                        <span class="songName">{{loop.index}}. {{recom}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

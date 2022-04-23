@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    /* background-color: white; */
+    background-image: linear-gradient(60deg, #60bef8, #d88cff, #00ffff, #60bef8);
+    background-size: 600% 600%;
+    animation: bgAnimatedGradient 20s infinite linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.span_songName {
+    color: greenyellow;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+a {
+    text-decoration: None;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    min-height: 72vh;
+    background: linear-gradient(to top left, #33ccff 0%, #ccffcc 100%);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    margin: 93px auto;
+    width: 70%;
+    border-radius: 15px;
+    padding: 34px;
+    /* background-image: url('bg.jpg'); */
+}
+
+.songItemContainer {
+    margin-top: 20px;
+}
+
+.songList {
+    margin: auto;
+    width: 60%;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.songName {
+    margin: 20px;
+}
+
+.input_song {
+    padding-bottom: 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+input[type=text]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@keyframes bgAnimatedGradient {
+    0% {
+        background-position: 0 85%;
+    }
+
+    0% {
+        background-position: 100% 20%;
+    }
+
+    100% {
+        background-position: 0% 85%;
+    }
+}
